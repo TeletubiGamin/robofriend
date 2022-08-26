@@ -1,1 +1,1 @@
-Link to teh app : https://teletubigamin.github.io/robofriend/
+Link to the app : https://teletubigamin.github.io/robofriend/
