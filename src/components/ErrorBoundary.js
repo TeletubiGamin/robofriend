@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
-class ErrorBoundary extends Component {
-	constructor() {
-		super();
-		this.state = {
-			hasError: false
-		}
-	}
+const ErrorBoundary = (props) => {
+	
+	const [hasError, updateHaserror] = useState(false);
 
-	componentDidCatch(error, info){
-		this.setState({hasError:true});
+	useEffect((error, info) => {
+		if(error&&info){
+		updateHaserror(true);}
+	});
+	 console.log('e');
+	if(hasError){
+		return <h1> Fail </h1>
 	}
-
-	render() {
-		if(this.state.hasError){
-			return <h1> Fail </h1>
-		}
-		return this.props.children
-	}
+	return props.children
 }
 
 
