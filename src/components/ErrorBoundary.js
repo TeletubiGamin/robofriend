@@ -7,8 +7,7 @@ const ErrorBoundary = (props) => {
 	useEffect((error, info) => {
 		if(error&&info){
 		updateHaserror(true);}
-	});
-	 console.log('e');
+	},[]);
 	if(hasError){
 		return <h1> Fail </h1>
 	}
